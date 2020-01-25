@@ -37,7 +37,7 @@ before_install:
     - pyenv virtualenv 3.6.1 undang
     - pyenv activate undang
     - pip install -r requirements.txt
-    - curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+    - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
     - sudo apt-get install nodejs
     - sudo apt-get install build-essential
     - PATH=$PATH:$JAVA_HOME/bin
@@ -60,6 +60,7 @@ before_script:
 
 script:
     - avd devices
+    - adb install data/apps/falabellaApp.apk
     - "./gradlew assemble" # Build
     # - ./gradlew clean connectedCheck
     # - chmod +x ./gradlew

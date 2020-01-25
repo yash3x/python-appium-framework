@@ -35,12 +35,14 @@ class Driver(unittest.TestCase):
             elif self.app == 'android':
                 desired_caps = {}
                 desired_caps['platformName'] = 'Android'
-                desired_caps['platformVersion'] = ''
-                desired_caps['deviceName'] = 'PF_Nexus'
+                desired_caps['platformVersion'] = '9'
+                desired_caps['deviceName'] = 'star2lte'
+                desired_caps["noReset"] = "True"
+                desired_caps["autoAcceptAlerts"] = "True"
                 desired_caps['wdaLocalPort'] = Driver.wda_port(self)
                 desired_caps['udid'] = Driver.android_device_name(self)
-                desired_caps['appPackage'] = 'com.wdiodemoapp'
-                desired_caps['appActivity'] = 'com.wdiodemoapp.MainActivity'
+                desired_caps['appPackage'] = 'com.falabella.falabellaApp'
+                desired_caps['appActivity'] = 'com.falabella.falabellaApp.SplashActivity'
         
         else:
             if self.app == 'ios':
@@ -52,10 +54,14 @@ class Driver(unittest.TestCase):
             elif self.app == 'android':
                 desired_caps = {}
                 desired_caps['platformName'] = 'Android'
-                desired_caps['platformVersion'] = ''
-                desired_caps['deviceName'] = 'PF'
-                desired_caps['appPackage'] = 'com.wdiodemoapp'
-                desired_caps['appActivity'] = 'com.wdiodemoapp.MainActivity'    
+                desired_caps['platformVersion'] = '9'
+                desired_caps['deviceName'] = 'star2lte'
+                desired_caps["noReset"] = "True"
+                desired_caps["autoAcceptAlerts"] = "True"
+                desired_caps['appPackage'] = 'com.falabella.falabellaApp'
+                desired_caps['appActivity'] = 'com.falabella.falabellaApp.SplashActivity'
+                desired_caps["noReset"] = "True"
+                desired_caps["autoAcceptAlerts"] = "True"
         
         logging.info("Initiating Appium driver")
         self.driver = webdriver.Remote("http://0.0.0.0:4723/wd/hub", desired_caps)
