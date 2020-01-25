@@ -35,7 +35,7 @@ class Driver(unittest.TestCase):
             elif self.app == 'android':
                 desired_caps = {}
                 desired_caps['platformName'] = 'Android'
-                desired_caps['platformVersion'] = '7.1'
+                desired_caps['platformVersion'] = '8.1'
                 desired_caps['deviceName'] = 'PF'
                 desired_caps["noReset"] = "True"
                 desired_caps["autoAcceptAlerts"] = "True"
@@ -54,7 +54,7 @@ class Driver(unittest.TestCase):
             elif self.app == 'android':
                 desired_caps = {}
                 desired_caps['platformName'] = 'Android'
-                desired_caps['platformVersion'] = '7.1'
+                desired_caps['platformVersion'] = '8.1'
                 desired_caps['deviceName'] = 'PF'
                 desired_caps["noReset"] = "True"
                 desired_caps["autoAcceptAlerts"] = "True"
