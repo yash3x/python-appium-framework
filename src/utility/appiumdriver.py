@@ -35,8 +35,8 @@ class Driver(unittest.TestCase):
             elif self.app == 'android':
                 desired_caps = {}
                 desired_caps['platformName'] = 'Android'
-                desired_caps['platformVersion'] = '9'
-                desired_caps['deviceName'] = 'star2lte'
+                desired_caps['platformVersion'] = '7.1'
+                desired_caps['deviceName'] = 'PF'
                 desired_caps["noReset"] = "True"
                 desired_caps["autoAcceptAlerts"] = "True"
                 desired_caps['wdaLocalPort'] = Driver.wda_port(self)
@@ -54,8 +54,8 @@ class Driver(unittest.TestCase):
             elif self.app == 'android':
                 desired_caps = {}
                 desired_caps['platformName'] = 'Android'
-                desired_caps['platformVersion'] = '9'
-                desired_caps['deviceName'] = 'star2lte'
+                desired_caps['platformVersion'] = '7.1'
+                desired_caps['deviceName'] = 'PF'
                 desired_caps["noReset"] = "True"
                 desired_caps["autoAcceptAlerts"] = "True"
                 desired_caps['appPackage'] = 'com.falabella.falabellaApp'
