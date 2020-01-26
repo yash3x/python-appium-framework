@@ -42,9 +42,7 @@ before_install
 #    - npm install appium-doctor
 #    - "./node_modules/.bin/appium-doctor"
 #    - "./node_modules/.bin/appium --log-level info > appium_log.txt &"
-    - sdkmanager tools
-    - yes | sdkmanager --update
-    - yes | sdkmanager --licenses
+#    - sdkmanager tools
     - yes | sdkmanager "platforms;android-27"
     - yes | sdkmanager "build-tools;android-26.0.2"
 
